@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+
+body {
+    background: #666;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    padding-top: 5rem;
+    width: 888px;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 6px;
+    background: white;
+    padding: 1rem;
+    box-shadow: 2px 3px 10px rgba(0, 0, 0, .2);
+}
+
+.btn {
+    color: #42b983;
+    position: relative;
+    border-radius: 99px;
+    border: 1px solid #42b983;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.5rem 1.5rem;
+    font-weight: 700;
+    outline: none;
+    background: #fff;
+    transition: all 0.22s;
+    cursor: pointer;
+    margin-right: 1rem;
+
+}
+
+.btn.primary {
+    background: #42b983;
+    color: #fff;
+}
+
+.btn:active {
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+input[type = file] {
+    display: none;
+}
+
+.preview {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+}
+
+.preview-image {
+    position: relative;
+    margin-bottom: .5rem;
+    margin-right: .5rem;
+    overflow: hidden;
+}
+
+.preview-image.removing {
+    transform: scale(0);
+    transition: transform .5s;
+}
+
+.preview-image img {
+    margin-top: 5px;
+    width: auto;
+    height: 200px;
+}
+
+.preview-image:hover .preview-info {
+    bottom: 4px;
+}
+
+.preview-image:hover .preview-remove {
+    opacity: 1;
+}
+
+.preview-remove {
+    opacity: 0;
+    transition: opacity .22s;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-weight: bold;
+    background: rgba(255, 255, 255, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.preview-info {
+    padding: 0 5px;
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    left: 0;
+    height: 25px;
+    font-size: .8rem;
+    background: rgba(255, 255, 255, .5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: bottom .22s;
+}
+
+
+.preview-info-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: cornflowerblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.2s;
+    width: 30%;
+
+}
